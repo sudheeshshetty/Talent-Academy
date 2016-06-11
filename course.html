@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<script src="lib/angular/angular.min.js"></script>   
+<head>     
+    <link rel="stylesheet" type="text/css" href="course.css" />
+ <script type="text/javascript">
+     /* Set the width of the side navigation to 250px and the left margin of the page content to 250px */
+     function openNav() {
+         document.getElementById("mySidenav").style.width = "250px";
+         document.getElementById("main").style.marginLeft = "250px";
+     }
+     /* Set the width of the side navigation to 0 and the left margin of the page content to 0 */
+     function closeNav() {
+         document.getElementById("mySidenav").style.width = "0";
+         document.getElementById("main").style.marginLeft = "0";
+     }
+</script>
+</head>
+<body>   
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="#">Class Room Trainings</a>
+        <a href="#">Hands-On Workshops</a>
+        <a href="#">Online Courses</a>
+        <a href="#">More</a>
+    </div>
+    <div id="main">
+        <h2>Courses Offered</h2>    
+        <span style="font-size:30px;cursor:pointer" onclick="openNav()">> Open</span>
+        <div id=>
+        </div>
+    </div>
+  
+
+</body>
+</html>
