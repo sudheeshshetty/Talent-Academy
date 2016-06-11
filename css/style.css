@@ -1,7 +1,13 @@
 footer {
-    position: fixed;
+    position: relative;
     padding-top: 0.5%;
     bottom: 0;
     width: 100%;
     background-color:darkgrey; 
+}
+img{
+    max-height: 400px;
+    max-width: 100%;
+    min-height: 400px;
+    min-width: 100%;
 }
