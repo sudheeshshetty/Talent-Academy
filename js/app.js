@@ -7,7 +7,15 @@ myapp.config(function($stateProvider, $urlRouterProvider){
           url:'/home',
           templateUrl:'home.html'
     })
+    .state('course',{
+        url:'/course',
+        templateUrl:'course.html',
+        controller:'MainCtrl'
+    })
 });
 
-myapp.controller('MainCtrl',function($scope){
+myapp.controller('MainCtrl',function($scope,$state){
+    $scope.callCourse = function () {
+        $state.go('course');
+    };
 });
