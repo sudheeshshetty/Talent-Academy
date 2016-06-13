@@ -1,21 +1,28 @@
-var myapp=angular.module('myApp',['ui.router']);
+$(document).ready(function () {
+  var trigger = $('.hamburger'),
+      overlay = $('.overlay'),
+     isClosed = false;
 
-myapp.config(function($stateProvider, $urlRouterProvider){
-    $urlRouterProvider.otherwise('/home');
-    $stateProvider
-    .state('home',{
-          url:'/home',
-          templateUrl:'home.html'
-    })
-    .state('course',{
-        url:'/course',
-        templateUrl:'course.html',
-        controller:'MainCtrl'
-    })
-});
+    trigger.click(function () {
+      hamburger_cross();      
+    });
 
-myapp.controller('MainCtrl',function($scope,$state){
-    $scope.callCourse = function () {
-        $state.go('course');
-    };
+    function hamburger_cross() {
+
+      if (isClosed == true) {          
+        overlay.hide();
+        trigger.removeClass('is-open');
+        trigger.addClass('is-closed');
+        isClosed = false;
+      } else {   
+        overlay.show();
+        trigger.removeClass('is-closed');
+        trigger.addClass('is-open');
+        isClosed = true;
+      }
+  }
+  
+  $('[data-toggle="offcanvas"]').click(function () {
+        $('#wrapper').toggleClass('toggled');
+  });  
 });

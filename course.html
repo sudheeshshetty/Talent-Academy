@@ -1,62 +1,23 @@
-<!DOCTYPE html>
-<html lang="en-US">
-<script src="lib/angular/angular.min.js"></script>   
-<head>     
-    <title>Courses Offered</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
-    <script type="text/javascript" src="lib/jquery-1.12.4.min.js"></script>
-    <script src="lib/bootstrap-3.3.6-dist/js/bootstrap.min.js"></script>
-    <link href="lib/bootstrap-3.3.6-dist/css/bootstrap.min.css" rel="stylesheet">
-    <script type="text/javascript" src="lib/angular/angular.min.js"></script>
-    <script src="lib/angular/angular-ui-router.js"></script>
-    <script type="text/javascript" src="js/app.js"></script>
-    <link rel="stylesheet" href="css/style.css">
-    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
- <script type="text/javascript">
-     /* Set the width of the side navigation to 250px and the left margin of the page content to 250px */
-     function openNav() {
-         document.getElementById("mySidenav").style.width = "250px";
-         document.getElementById("main").style.marginLeft = "250px";
-     }
-     /* Set the width of the side navigation to 0 and the left margin of the page content to 0 */
-     function closeNav() {
-         document.getElementById("mySidenav").style.width = "0";
-         document.getElementById("main").style.marginLeft = "0";
-     }
-</script>
-</head>
-<body>
-    <div class="nav-side-menu">
-    <div class="brand"><a type="button" href="#">Courses Offered</a></div>
+<div class="nav-side-menu">
+    <div class="brand">Courses Offered</div>
     <i class="fa fa-bars fa-2x toggle-btn" data-toggle="collapse" data-target="#menu-content"></i>
   
         <div class="menu-list">
   
             <ul id="menu-content" class="menu-content collapse out">
+                 <li>
+                  <a id="frontend" ng-click="FrontEndCourses()" href="">
+                  <i class="fa fa-user fa-lg"></i> Front End
+                  </a>
+                  </li>
 
-                <li  data-toggle="collapse" data-target="#some-course" class="collapsed active">
-                  <a href="#"> Some Course <span class="arrow"></span></a>
+                 <li>
+                  <a id="backend" ng-click="BackendCourses()" href="">
+                  <i class="fa fa-users fa-lg"></i> Back End
+                  </a>
                 </li>
-                <ul class="sub-menu collapse" id="some-course">
-                    <li class="active"><a href="#">Sub Course</a></li>
-                    <li><a href="#">Sub Course</a></li>
-                    <li><a href="#">Sub Course</a></li>
-                    <li><a href="#">Sub Course</a></li>
-                    <li><a href="#">Sub Course</a></li>
-                </ul>
-
-
-                <li data-toggle="collapse" data-target="#next-course" class="collapsed">
-                  <a href="#">Next-course<span class="arrow"></span></a>
-                </li>  
-                <ul class="sub-menu collapse" id="next-course">
-                  <li>New Service 1</li>
-                  <li>New Service 2</li>
-                  <li>New Service 3</li>
-            </ul>
             </ul>
      </div>
 </div>
-</body>
-</html>
+
+<div class="pull-right" ui-view='detail'></div>

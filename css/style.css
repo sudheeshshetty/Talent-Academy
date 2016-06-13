@@ -28,6 +28,7 @@ p{
 }
 
 
+
 .nav-side-menu {
   overflow: auto;
   font-family: verdana;
@@ -140,16 +141,16 @@ p{
 }
 @media (max-width: 767px) {
   .nav-side-menu {
-    position: fixed;
+    position: relative;
     width: 100%;
-     top:250px
+    margin-bottom: 10px;
   }
   .nav-side-menu .toggle-btn {
     display: block;
     cursor: pointer;
-    position: absolute;
+    position: relative;
     right: 10px;
-    top:10px;
+    top: 10px;
     z-index: 10 !important;
     padding: 3px;
     background-color: #ffffff;
